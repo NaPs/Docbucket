@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extraheaders %}
+<script type="text/javascript" src="{% static "js/jquery-fancybox/jquery.fancybox.js" %}"></script>
+<link rel="stylesheet" href="{% static "js/jquery-fancybox/jquery.fancybox.css" %}" media="screen">
+{% endblock %}
+
+{% block extrajs %}
+$(function() {
+    $('#pages ul').sortable({});
+    $('#pages .select').click(function() {
+        $('#pages input[type="checkbox"]').attr('checked', true);
+        return false;
+    });
+    $('#pages .deselect').click(function() {
+        $('#pages input[type="checkbox"]').attr('checked', false);
+        return false;
+    });
+    $('#pages .tumbnail img')
+    $("#pages .thumbnail a").fancybox();
+})
+{% endblock %}
+
+{% block body %}
+<h2>{% trans "Create a new document" %}</h2>
+
+<form method="POST" action="">
+{{ form.as_p }}
+
+{% csrf_token %}
+
+<div class="form-actions text-right">
+    <button type="submit" class="btn btn-primary">{% trans "Create document" %}</button>
+    <button type="reset" class="btn">{% trans "Cancel" %}</button>
+<div>
+
+</form>
+{% endblock %}

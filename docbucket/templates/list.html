@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load tagging_tags %}
+
+{% block body %}
+<h2>{% trans "List of documents" %}</h2>
+
+{% tag_cloud_for_model docbucket.Document as tagcloud with steps=6 %}
+
+<div class="text-center well">
+{% for tag in tagcloud %}
+<span style="font-size: {{ tag.font_size|add:"14" }}px"><a href="{% url list-tag tag.name %}">{{ tag.name }}</a></span>
+{% endfor %}
+</div>
+
+
+{% for document in documents %}
+    {% include "document.html" %}
+{% endfor %}
+
+<div class="pagination pagination-centered">
+    <ul>
+    {% if paginator.has_previous %}
+        <li><a href="?page={{ paginator.previous_page_number }}">{% trans "Prev" %}</a></li>
+    {% else %}
+        <li class="disabled"><a href="#">{% trans "Prev" %}</a></li>
+    {% endif %}
+
+    {% for page in paginator.paginator.page_range %}
+        {% if page == paginator.number %}
+        <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+        {% else %}
+        <li><a href="?page={{ page }}">{{ page }}</a></li>
+        {% endif %}
+    {% endfor %}
+
+    {% if paginator.has_next %}
+        <li><a href="?page={{ paginator.next_page_number }}">{% trans "Next" %}</a></li>
+    {% else %}
+        <li class="disabled"><a href="#">{% trans "Next" %}</a></li>
+    {% endif %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load tagging_tags %}
+
+{% block body %}
+<h2>{% trans "Hi!" %}</h2>
+<p>{% trans "I currently manage" %} {% blocktrans count total_count=total_count %}{{ total_count }} document{% plural %}{{ total_count }} documents{% endblocktrans %} {% blocktrans count total_tags=total_tags %}organized into {{ total_tags }} tag{% plural %}organized into {{ total_tags }} tags{% endblocktrans %} {% blocktrans with size=total_size|filesizeformat %}and taking {{ size }} of disk space.{% endblocktrans %}</p>
+
+{% tag_cloud_for_model docbucket.Document as tagcloud with steps=6 %}
+
+<div class="text-center cloud well">
+{% for tag in tagcloud %}
+<span style="font-size: {{ tag.font_size|add:"14" }}px"><a href="{% url list-tag tag.name %}">{{ tag.name }}</a></span>
+{% endfor %}
+</div>
+
+<h3>{% trans "Recent documents" %}</h3>
+
+{% for document in recent_documents %}
+    {% include "document.html" %}
+{% endfor %}
+
+{% endblock %}

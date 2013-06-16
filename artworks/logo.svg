@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="113.69164"
+   height="140.48155"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   inkscape:export-filename="/mnt/nas/logo.png"
+   inkscape:export-xdpi="40.270714"
+   inkscape:export-ydpi="40.270714"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3918">
+      <stop
+         style="stop-color:#5595df;stop-opacity:1;"
+         offset="0"
+         id="stop3920" />
+      <stop
+         style="stop-color:#5595df;stop-opacity:0;"
+         offset="1"
+         id="stop3922" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3788">
+      <stop
+         style="stop-color:#b2b2b2;stop-opacity:1;"
+         offset="0"
+         id="stop3790" />
+      <stop
+         id="stop3796"
+         offset="0.36231884"
+         style="stop-color:#2b2c2b;stop-opacity:0.49803922;" />
+      <stop
+         style="stop-color:#565656;stop-opacity:0;"
+         offset="1"
+         id="stop3792" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective3614"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3636"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3662"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3684"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       inkscape:collect="always"
+       id="filter3714"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.4257423"
+         id="feGaussianBlur3716" />
+    </filter>
+    <inkscape:perspective
+       id="perspective3730"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3714-4">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.4257423"
+         id="feGaussianBlur3716-7" />
+    </filter>
+    <inkscape:perspective
+       id="perspective3730-0"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3714-3">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.4257423"
+         id="feGaussianBlur3716-6" />
+    </filter>
+    <inkscape:perspective
+       id="perspective3806"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       inkscape:collect="always"
+       id="filter3820"
+       x="-0.1316722"
+       width="1.2633444"
+       y="-0.13613112"
+       height="1.2722622"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.8194278"
+         id="feGaussianBlur3822" />
+    </filter>
+    <inkscape:perspective
+       id="perspective3864"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3918"
+       id="linearGradient3924"
+       x1="168.33629"
+       y1="503.48471"
+       x2="256.18039"
+       y2="503.48471"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.96491"
+     inkscape:cx="72.27318"
+     inkscape:cy="50.501659"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2556"
+     inkscape:window-height="1396"
+     inkscape:window-x="0"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0"
+     fit-margin-top="1"
+     fit-margin-left="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-154.9399,-415.84997)">
+    <path
+       style="fill:#5595df;fill-opacity:1;stroke:none;filter:url(#filter3820)"
+       d="m 286.4351,482.50234 17.61832,82.34325 52.47436,-2.5778 17.75142,-82.38901 -87.8441,2.62356 z"
+       id="path2818-3-3"
+       transform="matrix(1.0064363,0,0,1.0064363,-120.69771,-24.790661)"
+       inkscape:export-filename="/mnt/nas/logo.png"
+       inkscape:export-xdpi="40.270714"
+       inkscape:export-ydpi="40.270714"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#868686;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 172.85714,465.57647 c -5,-47.85714 88.92857,-42.85715 81.78572,-1.42857"
+       id="path2832"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/mnt/nas/logo.png"
+       inkscape:export-xdpi="40.270714"
+       inkscape:export-ydpi="40.270714"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g3773"
+       transform="translate(-107.85714,-27.857143)"
+       inkscape:export-filename="/mnt/nas/logo.png"
+       inkscape:export-xdpi="40.270714"
+       inkscape:export-ydpi="40.270714">
+      <g
+         id="g3718">
+        <path
+           style="fill:#3b4740;fill-opacity:1;stroke:none;filter:url(#filter3714)"
+           d="m 290.80738,543.17177 -1.39941,-88.11685 66.89836,-2.33972 -17.01116,92.15111 -48.48779,-1.69454 z"
+           id="path3652-1-9"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#b3d5c0;fill-opacity:1;stroke:none"
+           d="m 290.12901,541.81237 -1.39941,-88.11685 66.89836,-2.33972 -17.01116,92.15111 -48.48779,-1.69454 z"
+           id="path3652-1"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         style="opacity:0.85020243"
+         id="g3718-8"
+         transform="matrix(0.99191638,-0.12689328,0.12689328,0.99191638,-57.826201,44.286151)">
+        <path
+           style="fill:#3b4740;fill-opacity:1;stroke:none;filter:url(#filter3714-4)"
+           d="m 290.80738,543.17177 -1.39941,-88.11685 66.89836,-2.33972 -17.01116,92.15111 -48.48779,-1.69454 z"
+           id="path3652-1-9-4"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#b3d5c0;fill-opacity:1;stroke:none"
+           d="m 290.12901,541.81237 -1.39941,-88.11685 66.89836,-2.33972 -17.01116,92.15111 -48.48779,-1.69454 z"
+           id="path3652-1-5"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         style="opacity:0.87449395"
+         id="g3718-1"
+         transform="translate(3.571422,-3.2142876)">
+        <path
+           style="fill:#3b4740;fill-opacity:1;stroke:none;filter:url(#filter3714-3)"
+           d="m 290.80738,543.17177 -1.39941,-88.11685 66.89836,-2.33972 -17.01116,92.15111 -48.48779,-1.69454 z"
+           id="path3652-1-9-0"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#b3d5c0;fill-opacity:1;stroke:none"
+           d="m 290.12901,541.81237 -1.39941,-88.11685 66.89836,-2.33972 -17.01116,92.15111 -48.48779,-1.69454 z"
+           id="path3652-1-6"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <path
+       style="fill:#387bc8;fill-opacity:0.76712329;stroke:none"
+       d="m 167.70176,464.68368 20.14191,81.76258 52.37028,-4.19009 15.2097,-82.89587 -87.72189,5.32338 z"
+       id="path2818-9"
+       inkscape:export-filename="/mnt/nas/logo.png"
+       inkscape:export-xdpi="40.270714"
+       inkscape:export-ydpi="40.270714"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#95bdeb;fill-opacity:1;stroke:none"
+       d="m 169.5204,460.79822 12.00354,83.34705 52.52849,0.98045 23.28816,-80.99829 -87.82019,-3.32921 z"
+       id="path2818"
+       inkscape:export-filename="/mnt/nas/logo.png"
+       inkscape:export-xdpi="40.270714"
+       inkscape:export-ydpi="40.270714"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:url(#linearGradient3924);fill-opacity:1;stroke:none"
+       d="m 168.33629,463.62486 17.61832,82.34325 52.47436,-2.5778 17.75142,-82.38901 -87.8441,2.62356 z"
+       id="path2818-3"
+       inkscape:export-filename="/mnt/nas/logo.png"
+       inkscape:export-xdpi="40.270714"
+       inkscape:export-ydpi="40.270714"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.52777076px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="203.59918"
+       y="425.67776"
+       id="text3852"
+       inkscape:export-filename="/mnt/nas/logo.png"
+       inkscape:export-xdpi="40.270714"
+       inkscape:export-ydpi="40.270714"><tspan
+         sodipodi:role="line"
+         id="tspan3854"
+         x="203.59918"
+         y="425.67776">Lorem ipsum dolor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.52777076px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="188.22667"
+       y="431.14328"
+       id="text3852-2"
+       inkscape:export-filename="/mnt/nas/logo.png"
+       inkscape:export-xdpi="40.270714"
+       inkscape:export-ydpi="40.270714"><tspan
+         sodipodi:role="line"
+         id="tspan3854-0"
+         x="188.22667"
+         y="431.14328">Nam eget risus ipsum. Pellentesque ac </tspan><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="434.30298"
+         id="tspan3885">diam sed nisi fringilla condimentum. </tspan><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="437.46271"
+         id="tspan3887">Praesent fermentum imperdiet sapien, </tspan><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="440.62241"
+         id="tspan3889">non dignissim turpis pulvinar sed. </tspan><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="443.78214"
+         id="tspan3893">Vestibulum ante magna, ornare sed </tspan><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="446.94183"
+         id="tspan3897">faucibus id, posuere eget magna. </tspan><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="450.10156"
+         id="tspan3899" /><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="453.26126"
+         id="tspan3901">Vestibulum rutrum augue et dui consequat </tspan><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="456.42099"
+         id="tspan3903">tincidunt. Donec at lorem nec arcu tempor </tspan><tspan
+         sodipodi:role="line"
+         x="188.22667"
+         y="459.58069"
+         id="tspan3883">tristique et at risus.</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,171 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" media="screen">
+    <link rel="stylesheet" href="{% static "css/bootstrap-editable.css" %}" media="screen">
+    <link rel="stylesheet" href="{% static "css/bootstrap-tagmanager.css" %}" media="screen">
+    <script type="text/javascript" src="{% static "js/jquery/jquery.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery-ui/jquery-ui.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap-editable.min.js" %}"></script>
+    <script src="{% static "js/bootstrap-tagmanager.js" %}"></script>
+    <style type="text/css">
+        body {
+            padding-top: 80px;
+        }
+
+        .thumbnail {
+            background-color: #fff;
+        }
+
+        .btn-group {
+            padding: 20px 0;
+        }
+
+        .cloud span {
+            margin: 0 4px;
+        }
+
+        .brand {
+            font-weight: bold !important;
+        }
+
+        .meta {
+            background-color: #E9E9E9;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .meta a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        footer {
+            margin: 20px auto;
+        }
+
+        .tags {
+            display: inline-block;
+            padding: 6px 6px;
+            vertical-align: middle;
+            -webkit-border-radius: 4px;
+             -moz-border-radius: 4px;
+                  border-radius: 4px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+             -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+             -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+               -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+                  transition: border linear 0.2s, box-shadow linear 0.2s;
+        }
+
+        .tags input {
+            border: none;
+            margin: 0;
+            -webkit-border-radius: none !important;
+             -moz-border-radius: none !important;
+                  border-radius: none !important;
+            -webkit-box-shadow: none !important;
+             -moz-box-shadow: none !important;
+                  box-shadow: none !important;
+            -webkit-transition: none !important;
+             -moz-transition: none !important;
+               -o-transition: none !important;
+                  transition: none !important;
+        }
+
+        .tags input:hover, .tags input:focus {
+            -webkit-box-shadow: none !important;
+             -moz-box-shadow: none !important;
+                  box-shadow: none !important;
+        }
+
+        .myTag {
+            display: inline-block;
+            background-color: #E9E9E9;
+            padding: 2px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            margin: 2px;
+        }
+
+        .myTagRemover {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 20px;
+            color: #000000;
+            text-shadow: 0 1px 0 #ffffff;
+            opacity: 0.2;
+            filter: alpha(opacity=20);
+        }
+    </style>
+
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+
+    {% block extraheaders %}{% endblock %}
+    <script>
+    {% block extrajs %}{% endblock %}
+    </script>
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="{% url home %}"><img src="{% static "img/logo.png" %}" alt="Docbucket logo" /> Docbucket</a>
+                <ul class="nav">
+                    <li><a href="{% url home %}">{% trans "Home" %}</a></li>
+                    <li class="dropdown">
+                        <a href="" data-target="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Create" %} <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        {% for compiler, compiler_name in COMPILERS %}
+                            <li><a tabindex="-1" href="{% url create compiler %}">From {{ compiler_name }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </li>
+                    <li><a href="{% url list %}">{% trans "List" %}</a></li>
+                </ul>
+
+                <ul class="nav pull-right">
+                <li>
+                <form class="form-search navbar-form" action="{% url search %}" method="GET">
+                    <div class="input-append" style="margin-top: 14px">
+                        <input type="text" id="query" name="query" class="span4 search-query" />
+                        <button type="submit" class="btn"><i class="icon-search"></i></button>
+                    </div>
+                </form>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message.message}}
+    </div>
+{% endfor %}
+        <div class="container">
+            {% block body %}{% endblock body %}
+        </div>
+
+    </div>
+
+    <footer class="text-center">{% trans "Powered by" %} <a href="http://github.com/NaPs/Docbucket">Docbucket</a></footer>
+
+</body>
+</html>

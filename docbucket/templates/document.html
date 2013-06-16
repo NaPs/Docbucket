@@ -1,0 +1,17 @@
+{% load i18n %}
+
+<div class="media">
+    <a class="pull-left" href="">
+        <img class="media-object img-polaroid" src="{% url thumbnail-document document.id %}?size=70x70" alt="{{ document.title }} thumbnail"/>
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading"><a href="{% url show document.id %}">{{ document.title }}</a></h4>
+        <span class="meta"><i class="icon-time"></i> {% blocktrans with created_since=document.created_on|timesince %}Created {{ created_since }} ago{% endblocktrans %}</span>
+        <span class="meta"><i class="icon-time"></i> {% blocktrans with last_access_since=document.last_access_on|timesince %}Last access {{ last_access_since }} ago{% endblocktrans %}</span>
+        <span class="meta"><i class="icon-file"></i> {% blocktrans count pages=document.pages%}{{ pages }} page{% plural %}{{ pages }} pages{% endblocktrans %}</span>
+        <span class="meta"><i class="icon-hdd"></i> {{ document.document.size|filesizeformat }}</span>
+    {% for tag in document.tags %}
+        <span class="meta"><i class="icon-tag"></i> <a href="{% url list-tag tag.name %}">{{ tag.name }}</a></span>
+    {% endfor %}
+    </div>
+</div>

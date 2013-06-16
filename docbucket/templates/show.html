@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extrajs %}
+$(function() {
+    $.fn.editable.defaults.mode = 'inline';
+    $.fn.editable.defaults.send = 'always';
+    $.fn.editable.defaults.error = function(response, newValue) {
+        if(response.status >= 400) {
+            return 'Service unavailable. Please try later.';
+        } else {
+            return response.responseText;
+        }
+    };
+    $('.editable').editable();
+    $('.tags input').tagsManager({
+        prefilled: "{% for tag in document.tags %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}",
+        typeahead: true,
+        typeaheadAjaxSource: "{% url ajax_tags %}",
+        AjaxPush: "/lol",
+
+    });
+})
+{% endblock %}
+
+
+{% block body %}
+
+<h2><a href="#" data-type="text" data-name="title" data-url="{% url ajax_document document.id %}" data-inputclass="span10" class="editable"> {{ document.title }}</a></h2>
+
+<div class="row">
+
+    <div class="span5">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>{% trans "Created" %}</th>
+                <td>{{ document.created_on|timesince }}</td>
+            </tr>
+            <tr>
+                <th>{% trans "Tags" %}</th>
+                <td>
+                    <div class="tags">
+                        <input autocomplete="off" data-items="6" data-provide="typeahead" type="text" name="tags" placeholder="Add" class="input-mini" data-original-title="" />
+                    </div>
+
+
+
+
+                </td>
+            </tr>
+            <tr>
+                <th>{% trans "Pages" %}</th>
+                <td>{{ document.pages }}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="text-center">
+                        <a href="{{ MEDIA_URL }}{{ document.document }}" class="btn btn-large btn-primary">{% trans "Download" %} <small>({{ document.document.size|filesizeformat }})</small></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="span7 text-center">
+        <img src="{% url thumbnail-document document.pk %}?size=600x740" class="img-polaroid" alt="Document picture"/>
+    </div>
+
+</div>
+{% endblock %}

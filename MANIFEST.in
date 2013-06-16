@@ -1,0 +1,7 @@
+include README.rst
+include RELEASE.rst
+include CHANGELOG.rst
+include TODO.rst
+include COPYING
+include etc/docbucket.conf
+recursive-include docbucket *.py *.png *.gif *.js *.css *.html
