@@ -89,6 +89,19 @@ class OcrTiffCompiler(DocumentCompiler, AssembleMixIn):
         return pdf_filename
 
 
+class PdfCompiler(DocumentCompiler, AssembleMixIn):
+
+    """ This DocumentCompiler allow to import PDF files without any processing.
+    """
+
+    name = 'PDF'
+    extensions = ['.pdf']
+
+    def compile_files(self, filenames):
+        complete_pdf_filename = self.assemble(filenames)
+        return open(complete_pdf_filename)
+
+
 def load_compilers():
     """ Load all compilers found in settings.py file.
     """
