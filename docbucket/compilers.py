@@ -45,7 +45,6 @@ class OcrTiffCompiler(DocumentCompiler):
     HOCR2PDF_CMD = '/usr/bin/hocr2pdf -i %(input_img)s -o %(output)s < %(input_hocr)s'
     ASSEMBLE_CMD = '/usr/bin/gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=%(output)s %(inputs)s'
 
-
     def compile_files(self, filenames):
         pdfs = []
         for filename in filenames:
