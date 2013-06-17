@@ -1,6 +1,6 @@
 import os
 import threading
-from tempfile import mktemp
+from tempfile import mktemp, mkdtemp
 from subprocess import Popen
 
 from django import forms
@@ -87,6 +87,28 @@ class OcrTiffCompiler(DocumentCompiler, AssembleMixIn):
             raise RuntimeError('Error while hocr2pdf')
 
         return pdf_filename
+
+
+class OcrPdfCompiler(OcrTiffCompiler):
+
+    """ This DocumentCompiler transforms image only PDF files into a searchable
+        PDF file.
+    """
+
+    name = 'PDF (with OCR)'
+    extensions = ['.pdf']
+
+    CONVERT_CMD = '/usr/bin/gs -r320 -dNOPAUSE -dBATCH -sOutputFile=%(output)s -sDEVICE=tiff24nc %(input)s'
+
+    def compile_files(self, filenames):
+        tmp_dir = mkdtemp()
+        for i, filename in enumerate(filenames):
+            opts = {'input': filenames[0], 'output': os.path.join(tmp_dir, 'out_%06d_%%06d.tiff' % i)}
+            if Popen(self.CONVERT_CMD % opts, shell=True, stdout=devnull, stderr=devnull).wait() != 0:
+                raise RuntimeError('Error while converting PDF to tiff')
+
+        tiff_filenames = sorted(os.path.join(tmp_dir, x) for x in os.listdir(tmp_dir))
+        return super(OcrPdfCompiler, self).compile_files(tiff_filenames)
 
 
 class PdfCompiler(DocumentCompiler, AssembleMixIn):
