@@ -2,6 +2,7 @@
 {% load i18n %}
 {% load static %}
 {% load tagging_tags %}
+{% load url from future %}
 
 {% block body %}
 <h2>{% trans "List of documents" %}</h2>
@@ -10,7 +11,7 @@
 
 <div class="text-center well">
 {% for tag in tagcloud %}
-<span style="font-size: {{ tag.font_size|add:"14" }}px"><a href="{% url list-tag tag.name %}">{{ tag.name }}</a></span>
+<span style="font-size: {{ tag.font_size|add:"14" }}px"><a href="{% url 'list-tag' tag.name %}">{{ tag.name }}</a></span>
 {% endfor %}
 </div>
 

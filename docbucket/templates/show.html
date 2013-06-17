@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load static %}
+{% load url from future %}
 
 {% block extrajs %}
 $(function() {
@@ -17,7 +18,7 @@ $(function() {
     $('.tags input').tagsManager({
         prefilled: "{% for tag in document.tags %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}",
         typeahead: true,
-        typeaheadAjaxSource: "{% url ajax_tags %}",
+        typeaheadAjaxSource: "{% url 'ajax_tags' %}",
         AjaxPush: "/lol",
 
     });
@@ -27,7 +28,7 @@ $(function() {
 
 {% block body %}
 
-<h2><a href="#" data-type="text" data-name="title" data-url="{% url ajax_document document.id %}" data-inputclass="span10" class="editable"> {{ document.title }}</a></h2>
+<h2><a href="#" data-type="text" data-name="title" data-url="{% url 'ajax_document' document.id %}" data-inputclass="span10" class="editable"> {{ document.title }}</a></h2>
 
 <div class="row">
 
@@ -64,7 +65,7 @@ $(function() {
     </div>
 
     <div class="span7 text-center">
-        <img src="{% url thumbnail-document document.pk %}?size=600x740" class="img-polaroid" alt="Document picture"/>
+        <img src="{% url 'thumbnail-document' document.pk %}?size=600x740" class="img-polaroid" alt="Document picture"/>
     </div>
 
 </div>

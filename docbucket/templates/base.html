@@ -1,5 +1,6 @@
 {% load static %}
 {% load i18n %}
+{% load url from future %}
 
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -126,23 +127,23 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="{% url home %}"><img src="{% static "img/logo.png" %}" alt="Docbucket logo" /> Docbucket</a>
+                <a class="brand" href="{% url 'home' %}"><img src="{% static "img/logo.png" %}" alt="Docbucket logo" /> Docbucket</a>
                 <ul class="nav">
-                    <li><a href="{% url home %}">{% trans "Home" %}</a></li>
+                    <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
                     <li class="dropdown">
                         <a href="" data-target="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Create" %} <b class="caret"></b></a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                         {% for compiler, compiler_name in COMPILERS %}
-                            <li><a tabindex="-1" href="{% url create compiler %}">From {{ compiler_name }}</a></li>
+                            <li><a tabindex="-1" href="{% url 'create' compiler %}">From {{ compiler_name }}</a></li>
                         {% endfor %}
                         </ul>
                     </li>
-                    <li><a href="{% url list %}">{% trans "List" %}</a></li>
+                    <li><a href="{% url 'list' %}">{% trans "List" %}</a></li>
                 </ul>
 
                 <ul class="nav pull-right">
                 <li>
-                <form class="form-search navbar-form" action="{% url search %}" method="GET">
+                <form class="form-search navbar-form" action="{% url 'search' %}" method="GET">
                     <div class="input-append" style="margin-top: 14px">
                         <input type="text" id="query" name="query" class="span4 search-query" />
                         <button type="submit" class="btn"><i class="icon-search"></i></button>
