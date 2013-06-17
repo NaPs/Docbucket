@@ -33,7 +33,25 @@ class DocumentCompiler(object):
         return CreateDocumentForm(*args, **kwargs)
 
 
-class OcrTiffCompiler(DocumentCompiler):
+class AssembleMixIn(object):
+
+    """ A mix-in for DocumentCompiler providing an assemble method.
+    """
+
+    ASSEMBLE_CMD = '/usr/bin/gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=%(output)s %(inputs)s'
+
+    def assemble(self, filenames):
+        """ Assemble all provided PDF files into one.
+        """
+
+        complete_pdf_filename = mktemp(suffix='.pdf')
+        opts = {'inputs': ' '.join(filenames), 'output': complete_pdf_filename}
+        if Popen(self.ASSEMBLE_CMD % opts, shell=True, stdout=devnull, stderr=devnull).wait() != 0:
+            raise RuntimeError('Error while assemble')
+        return complete_pdf_filename
+
+
+class OcrTiffCompiler(DocumentCompiler, AssembleMixIn):
 
     """ This DocumentCompiler transforms tiff files in a searchable PDF file.
     """
@@ -43,18 +61,13 @@ class OcrTiffCompiler(DocumentCompiler):
 
     HOCR_CMD = '/usr/bin/cuneiform -l fra -f hocr -o %(output)s %(input)s'
     HOCR2PDF_CMD = '/usr/bin/hocr2pdf -i %(input_img)s -o %(output)s < %(input_hocr)s'
-    ASSEMBLE_CMD = '/usr/bin/gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=%(output)s %(inputs)s'
 
     def compile_files(self, filenames):
         pdfs = []
         for filename in filenames:
             pdfs.append(self._ocr(filename))
 
-        # Assemble all PDF files into one:
-        complete_pdf_filename = mktemp(suffix='.pdf')
-        opts = {'inputs': ' '.join(pdfs), 'output': complete_pdf_filename}
-        if Popen(self.ASSEMBLE_CMD % opts, shell=True, stdout=devnull, stderr=devnull).wait() != 0:
-            raise RuntimeError('Error while assemble')
+        complete_pdf_filename = self.assemble(pdfs)
 
         return open(complete_pdf_filename)
 
